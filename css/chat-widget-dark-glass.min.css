@@ -24,15 +24,11 @@ body.dark-theme {
 
   /* 3D Shadow for depth */
   --glass-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    0 8px 16px rgba(0, 0, 0, 0.25),
-    0 16px 32px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 2px 4px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.25),
+    0 16px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   --glass-shadow-hover:
-    0 4px 8px rgba(0, 0, 0, 0.35),
-    0 12px 24px rgba(0, 0, 0, 0.3),
-    0 20px 40px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    0 4px 8px rgba(0, 0, 0, 0.35), 0 12px 24px rgba(0, 0, 0, 0.3),
+    0 20px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 
   /* Reduced blur */
   --glass-blur: blur(6px);
@@ -58,8 +54,8 @@ body.dark-theme {
   --radius-pill: 50px;
 
   /* Typography */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'Manrope', 'Inter', sans-serif;
+  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: "Manrope", "Inter", sans-serif;
 }
 
 /* ============================================
@@ -81,15 +77,11 @@ body.light-theme {
 
   /* 3D Shadow for depth (softer for light mode) */
   --glass-shadow:
-    0 2px 4px rgba(15, 23, 42, 0.08),
-    0 8px 16px rgba(15, 23, 42, 0.06),
-    0 16px 32px rgba(15, 23, 42, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 2px 4px rgba(15, 23, 42, 0.08), 0 8px 16px rgba(15, 23, 42, 0.06),
+    0 16px 32px rgba(15, 23, 42, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
   --glass-shadow-hover:
-    0 4px 8px rgba(15, 23, 42, 0.12),
-    0 12px 24px rgba(15, 23, 42, 0.08),
-    0 20px 40px rgba(15, 23, 42, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
+    0 4px 8px rgba(15, 23, 42, 0.12), 0 12px 24px rgba(15, 23, 42, 0.08),
+    0 20px 40px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1);
 
   /* Reduced blur (same for both themes) */
   --glass-blur: blur(6px);
@@ -115,8 +107,8 @@ body.light-theme {
   --radius-pill: 50px;
 
   /* Typography (same for both themes) */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'Manrope', 'Inter', sans-serif;
+  --font-primary: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: "Manrope", "Inter", sans-serif;
 }
 
 /* ============================================
@@ -191,7 +183,8 @@ body.light-theme {
 
   /* 3D Raised Border */
   border: 1px solid;
-  border-color: var(--glass-border-top) var(--glass-border-right) var(--glass-border-bottom) var(--glass-border-left);
+  border-color: var(--glass-border-top) var(--glass-border-right)
+    var(--glass-border-bottom) var(--glass-border-left);
 
   display: flex;
   flex-direction: column;
@@ -200,7 +193,10 @@ body.light-theme {
   visibility: hidden;
   transform: translateY(20px) scale(0.95);
   /* Simplified transition */
-  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
 
   z-index: 10000;
   overflow: hidden;
@@ -214,7 +210,7 @@ body.light-theme {
 
 /* Animated Gradient Border - Simplified for performance */
 .chat-window::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -1px;
   border-radius: var(--radius-lg);
@@ -243,8 +239,12 @@ body.light-theme {
 }
 
 @keyframes border-flow {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 200% 0%; }
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
 }
 
 .chat-window.open {
@@ -309,8 +309,13 @@ body.light-theme {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .status-text {
@@ -341,7 +346,8 @@ body.light-theme {
 
   /* 3D Raised Border */
   border: 1px solid;
-  border-color: var(--glass-border-top) var(--glass-border-right) var(--glass-border-bottom) var(--glass-border-left);
+  border-color: var(--glass-border-top) var(--glass-border-right)
+    var(--glass-border-bottom) var(--glass-border-left);
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -386,7 +392,9 @@ body.light-theme {
   background: var(--glass-bg);
   border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
   white-space: nowrap;
 
   /* Simplified border */
@@ -419,7 +427,13 @@ body.light-theme {
   min-height: 0;
 }
 
-/* Scrollbar */
+/* Scrollbar - Firefox */
+.chat-messages {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* Scrollbar - Webkit (Chrome, Safari, Edge) */
 .chat-messages::-webkit-scrollbar {
   width: 4px;
 }
@@ -448,8 +462,14 @@ body.light-theme {
 }
 
 @keyframes msg-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .chat-message.user {
@@ -477,7 +497,8 @@ body.light-theme {
 
   /* 3D Raised Border */
   border: 1px solid;
-  border-color: var(--glass-border-top) var(--glass-border-right) var(--glass-border-bottom) var(--glass-border-left);
+  border-color: var(--glass-border-top) var(--glass-border-right)
+    var(--glass-border-bottom) var(--glass-border-left);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -613,12 +634,21 @@ body.light-theme {
   animation: typing 1.4s infinite ease-in-out;
 }
 
-.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
 
 @keyframes typing {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* ============================================
@@ -695,8 +725,13 @@ body.light-theme {
 }
 
 @keyframes pulse-rec {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 /* Textarea */
@@ -775,8 +810,7 @@ body.light-theme {
     inset 0px 2px 2px rgba(255, 255, 255, 0.1),
     inset 0px 4px 4px rgba(255, 255, 255, 0.08),
     inset 0px 8px 8px rgba(255, 255, 255, 0.04),
-    /* drop shadows */
-    0px -1px 1px rgba(0, 0, 0, 0.02),
+    /* drop shadows */ 0px -1px 1px rgba(0, 0, 0, 0.02),
     0px -2px 2px rgba(0, 0, 0, 0.03),
     0px -4px 4px rgba(0, 0, 0, 0.05),
     0px -8px 8px rgba(0, 0, 0, 0.06);
@@ -855,8 +889,13 @@ body.light-theme {
 }
 
 @keyframes send-flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
 }
 
 /* Text wrapper for "Send" / "Sending" */
@@ -895,7 +934,10 @@ body.light-theme {
 }
 
 @keyframes send-letter-anim {
-  0%, 100% { color: rgba(255, 255, 255, 0.5); }
+  0%,
+  100% {
+    color: rgba(255, 255, 255, 0.5);
+  }
   50% {
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     color: #fff;
@@ -903,13 +945,27 @@ body.light-theme {
 }
 
 /* Letter animation delays */
-.send-letter:nth-child(1) { animation-delay: 0s; }
-.send-letter:nth-child(2) { animation-delay: 0.08s; }
-.send-letter:nth-child(3) { animation-delay: 0.16s; }
-.send-letter:nth-child(4) { animation-delay: 0.24s; }
-.send-letter:nth-child(5) { animation-delay: 0.32s; }
-.send-letter:nth-child(6) { animation-delay: 0.4s; }
-.send-letter:nth-child(7) { animation-delay: 0.48s; }
+.send-letter:nth-child(1) {
+  animation-delay: 0s;
+}
+.send-letter:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.send-letter:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.send-letter:nth-child(4) {
+  animation-delay: 0.24s;
+}
+.send-letter:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.send-letter:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.send-letter:nth-child(7) {
+  animation-delay: 0.48s;
+}
 
 /* Hover state */
 .chat-send:hover {
@@ -986,8 +1042,15 @@ body.light-theme {
 }
 
 @keyframes send-pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.15); opacity: 0.7; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.7;
+  }
 }
 
 /* Disabled state */
@@ -1111,14 +1174,62 @@ body.light-theme {
   z-index: 10001;
 }
 
-.resize-handle-nw { top: 0; left: 0; width: 14px; height: 14px; cursor: nw-resize; }
-.resize-handle-ne { top: 0; right: 0; width: 14px; height: 14px; cursor: ne-resize; }
-.resize-handle-sw { bottom: 0; left: 0; width: 14px; height: 14px; cursor: sw-resize; }
-.resize-handle-se { bottom: 0; right: 0; width: 14px; height: 14px; cursor: se-resize; }
-.resize-handle-n { top: 0; left: 14px; right: 14px; height: 4px; cursor: n-resize; }
-.resize-handle-s { bottom: 0; left: 14px; right: 14px; height: 4px; cursor: s-resize; }
-.resize-handle-e { top: 14px; right: 0; bottom: 14px; width: 4px; cursor: e-resize; }
-.resize-handle-w { top: 14px; left: 0; bottom: 14px; width: 4px; cursor: w-resize; }
+.resize-handle-nw {
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  cursor: nw-resize;
+}
+.resize-handle-ne {
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  cursor: ne-resize;
+}
+.resize-handle-sw {
+  bottom: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  cursor: sw-resize;
+}
+.resize-handle-se {
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  cursor: se-resize;
+}
+.resize-handle-n {
+  top: 0;
+  left: 14px;
+  right: 14px;
+  height: 4px;
+  cursor: n-resize;
+}
+.resize-handle-s {
+  bottom: 0;
+  left: 14px;
+  right: 14px;
+  height: 4px;
+  cursor: s-resize;
+}
+.resize-handle-e {
+  top: 14px;
+  right: 0;
+  bottom: 14px;
+  width: 4px;
+  cursor: e-resize;
+}
+.resize-handle-w {
+  top: 14px;
+  left: 0;
+  bottom: 14px;
+  width: 4px;
+  cursor: w-resize;
+}
 
 /* ============================================
    Mobile Responsive - Improved Breakpoints

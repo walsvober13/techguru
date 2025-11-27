@@ -1039,6 +1039,7 @@ body.light-theme .theme-toggle:hover {
     rgba(100, 222, 223, 0)
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -1440,6 +1441,7 @@ video.hero-slide {
   margin-bottom: 0.5rem;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1449,6 +1451,7 @@ video.hero-slide {
   margin-bottom: 1rem;
   background: linear-gradient(45deg, var(--color-accent), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   min-height: 2rem;
   transition: opacity 0.5s ease;
@@ -2953,6 +2956,7 @@ video.hero-slide {
   font-size: 1.5rem;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -3008,6 +3012,7 @@ video.hero-slide {
   margin-bottom: 2rem;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -3131,6 +3136,7 @@ video.hero-slide {
   margin-bottom: 1rem;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -3288,6 +3294,7 @@ video.hero-slide {
   margin-bottom: 3rem;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -3374,6 +3381,7 @@ video.hero-slide {
   font-size: 2.5rem;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -3493,6 +3501,7 @@ video.hero-slide {
   margin-bottom: 1.5rem;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -3558,6 +3567,7 @@ video.hero-slide {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
 }
@@ -3728,6 +3738,7 @@ video.hero-slide {
   margin-bottom: 1rem;
   background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -5201,24 +5212,26 @@ footer {
 }
 
 /* High contrast mode support */
-@media (prefers-contrast: high) {
-  .btn,
-  .btn-primary,
-  .btn-secondary {
-    border: 2px solid currentColor;
-  }
-  
-  .why-card,
-  .service-card,
-  .feature-card,
-  .faq-item {
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-  
-  a:focus,
-  button:focus {
-    outline: 3px solid var(--color-primary);
-    outline-offset: 2px;
+@supports (prefers-contrast: high) {
+  @media (prefers-contrast: high) {
+    .btn,
+    .btn-primary,
+    .btn-secondary {
+      border: 2px solid currentColor;
+    }
+    
+    .why-card,
+    .service-card,
+    .feature-card,
+    .faq-item {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    a:focus,
+    button:focus {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 2px;
+    }
   }
 }
 

@@ -155,6 +155,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Mobile menu toggle (using .navbar-toggle selector as fallback)
+  const navbarToggle = document.querySelector('.navbar-toggle');
+  const navMenuAlt = document.querySelector('.nav-menu');
+
+  if (navbarToggle && navMenuAlt) {
+      navbarToggle.addEventListener('click', () => {
+          navMenuAlt.classList.toggle('active');
+          // Optional: Update aria-expanded for accessibility
+          const isExpanded = navMenuAlt.classList.contains('active');
+          navbarToggle.setAttribute('aria-expanded', isExpanded);
+      });
+
+      // Close menu when clicking on a nav link (for mobile)
+      navMenuAlt.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+              navMenuAlt.classList.remove('active');
+              navbarToggle.setAttribute('aria-expanded', 'false');
+          });
+      });
+  }
+
   // ============================================
   // FAQ ACCORDION
   // ============================================
